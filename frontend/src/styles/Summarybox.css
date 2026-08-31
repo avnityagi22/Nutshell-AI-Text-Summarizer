@@ -1,0 +1,460 @@
+/* =========================
+   SUMMARY BOX
+========================= */
+
+.summary-box {
+  width: 100%;
+  max-width: 900px;
+  margin: 28px auto 0;
+
+  background: #ffffff;
+
+  border: 1px solid #e7e5ef;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 30px rgba(40, 35, 80, 0.06);
+
+  overflow: hidden;
+}
+
+/* =========================
+   SUMMARY HEADER
+========================= */
+
+.summary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 20px;
+
+  border-bottom: 1px solid #eeeef3;
+}
+
+.summary-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #22222a;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.summary-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.copy-button,
+.download-button {
+  border: 1px solid #e3e1eb;
+
+  background: #fafafd;
+  color: #4b4b58;
+
+  padding: 8px 12px;
+
+  border-radius: 9px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.copy-button:hover,
+.download-button:hover {
+  background: #f2efff;
+  border-color: #cfc6f2;
+  color: #6752b8;
+}
+
+.copy-button.active {
+  background: #eeeaff;
+  border-color: #cfc4f5;
+  color: #6752b8;
+
+  animation: copySuccess 0.3s ease;
+}
+
+@keyframes copySuccess {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.download-button:active {
+  transform: scale(0.96);
+}
+/* =========================
+   SUMMARY CONTENT
+========================= */
+
+.summary-content {
+  min-height: 180px;
+
+  padding: 24px;
+
+  color: #3f3f4a;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Actual summary */
+
+.summary-content > p {
+  margin: 0;
+
+  white-space: pre-wrap;
+}
+
+/* =========================
+   PLACEHOLDER
+========================= */
+
+.placeholder {
+  color: #a0a0aa;
+
+  text-align: center;
+
+  padding: 55px 20px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .summary-box {
+    margin-top: 22px;
+    border-radius: 14px;
+  }
+
+  .summary-header {
+    padding: 15px;
+  }
+
+  .summary-header h2 {
+    font-size: 17px;
+  }
+
+  .summary-actions {
+    gap: 5px;
+  }
+
+  .copy-button,
+  .download-button {
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+
+  .summary-content {
+    padding: 18px;
+    font-size: 14px;
+  }
+}
+/* =========================
+   AI LOADING
+========================= */
+
+.ai-loading {
+  min-height: 180px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  animation: fadeIn 0.3s ease;
+}
+
+.loading-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 12px;
+
+  border-radius: 50%;
+
+  background: #eeeafd;
+
+  color: #7059c7;
+
+  font-size: 24px;
+
+  animation: pulseIcon 1.5s ease-in-out infinite;
+}
+
+.ai-loading h3 {
+  margin: 0 0 6px;
+
+  font-size: 17px;
+
+  color: #30303a;
+}
+
+.ai-loading p {
+  margin: 0;
+
+  max-width: 350px;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: #9999a5;
+}
+
+
+/* =========================
+   LOADING DOTS
+========================= */
+
+.loading-dots {
+  display: flex;
+  gap: 5px;
+
+  margin-top: 16px;
+}
+
+.loading-dots span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #8066dd;
+
+  animation: loadingDot 1.2s infinite ease-in-out;
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.loading-dots span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.summary-placeholder {
+  min-height: 180px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.placeholder-icon {
+  margin-bottom: 12px;
+
+  font-size: 28px;
+
+  color: #c7c0e8;
+}
+
+.summary-placeholder p {
+  margin: 0 0 6px;
+
+  font-size: 14px;
+
+  color: #8d8d99;
+}
+
+.summary-placeholder span {
+  font-size: 12px;
+
+  color: #b0b0ba;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes loadingDot {
+
+  0%,
+  80%,
+  100% {
+    transform: scale(0.7);
+    opacity: 0.4;
+  }
+
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulseIcon {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode .summary-box {
+    background: #201e27;
+    border-color: #35323f;
+}
+
+body.dark-mode .summary-header h2 {
+    color: #f1eff6;
+}
+
+body.dark-mode .summary-content {
+    color: #d8d5df;
+}
+
+body.dark-mode .summary-text {
+    color: #d8d5df;
+}
+
+body.dark-mode .summary-placeholder p {
+    color: #9996a5;
+}
+
+body.dark-mode .summary-placeholder span {
+    color: #706d7b;
+}
+
+body.dark-mode .placeholder-icon {
+    color: #5e5679;
+}
+
+body.dark-mode .summary-stats {
+    border-color: #35323f;
+    color: #85818f;
+}
+
+
+/* Copy and Download */
+
+body.dark-mode .copy-button,
+body.dark-mode .download-button {
+    background: #292731;
+    border-color: #3b3846;
+    color: #b8b5c1;
+}
+
+body.dark-mode .copy-button:hover,
+body.dark-mode .download-button:hover {
+    background: #332f3e;
+    border-color: #514b62;
+    color: #e1ddec;
+}
+
+
+/* Loading */
+
+body.dark-mode .loading-icon {
+    background: #302a48;
+    color: #a997ed;
+}
+
+body.dark-mode .ai-loading h3 {
+    color: #eeeaf5;
+}
+
+body.dark-mode .ai-loading p {
+    color: #85818f;
+}
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode .summary-box {
+    background: #201e27;
+
+    border-color: #35323f;
+
+    color: #eeeeF2;
+}
+
+body.dark-mode .summary-header h2 {
+    color: #f1eff6;
+}
+
+body.dark-mode .summary-content {
+    color: #d8d5df;
+}
+
+body.dark-mode .summary-content p {
+    color: #d8d5df;
+}
+
+body.dark-mode .summary-content .placeholder {
+    color: #777482;
+}
+
+body.dark-mode .copy-button,
+body.dark-mode .download-button {
+    background: #292731;
+
+    border-color: #3b3846;
+
+    color: #b8b5c1;
+}
+
+body.dark-mode .copy-button:hover,
+body.dark-mode .download-button:hover {
+    background: #332f3e;
+
+    border-color: #514b62;
+
+    color: #e1ddec;
+}

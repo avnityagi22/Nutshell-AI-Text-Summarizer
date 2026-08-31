@@ -1,0 +1,258 @@
+.history-section {
+    width: 100%;
+    max-width: 900px;
+    margin: 35px auto 0;
+}
+
+
+/* HEADER */
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+.history-header h2 {
+    margin: 0;
+
+    font-size: 20px;
+
+    color: #25252d;
+}
+
+.history-header p {
+    margin: 4px 0 0;
+
+    font-size: 12px;
+
+    color: #9998a5;
+}
+
+
+/* CLEAR BUTTON */
+
+.clear-history-button {
+    padding: 8px 12px;
+
+    border: 1px solid #eadfe5;
+
+    border-radius: 8px;
+
+    background: #fff;
+
+    color: #a35b6f;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.clear-history-button:hover {
+    background: #fff5f7;
+
+    border-color: #e7bdc9;
+}
+
+
+/* EMPTY STATE */
+
+.empty-history {
+    padding: 40px 20px;
+
+    text-align: center;
+
+    border: 1px dashed #dedbe6;
+
+    border-radius: 14px;
+
+    background: #faf9fd;
+}
+
+.empty-history-icon {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.empty-history h3 {
+    margin: 0 0 5px;
+
+    font-size: 15px;
+
+    color: #44424d;
+}
+
+.empty-history p {
+    margin: 0;
+
+    font-size: 12px;
+
+    color: #9998a5;
+}
+
+
+/* HISTORY LIST */
+
+.history-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* CARD */
+
+.history-card {
+    padding: 16px;
+
+    border: 1px solid #e7e4ee;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    transition: all 0.2s ease;
+}
+
+.history-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 18px rgba(70, 60, 120, 0.08);
+}
+
+
+/* CARD TOP */
+
+.history-card-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+}
+
+.history-card h3 {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: #35333e;
+}
+
+.history-card span {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 10px;
+
+    color: #aaa8b4;
+}
+
+
+/* DELETE */
+
+.delete-history {
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    opacity: 0.6;
+}
+
+.delete-history:hover {
+    opacity: 1;
+}
+
+
+/* PREVIEW */
+
+.history-preview {
+    margin: 12px 0;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    color: #686672;
+}
+
+
+/* META */
+
+.history-meta {
+    display: flex;
+
+    gap: 8px;
+}
+
+.history-meta span {
+    display: inline-block;
+
+    margin: 0;
+
+    padding: 4px 8px;
+
+    border-radius: 6px;
+
+    background: #f4f1fc;
+
+    color: #705ac2;
+
+    font-size: 9px;
+}
+
+
+/* DARK MODE */
+
+body.dark-mode .history-header h2 {
+    color: #f4f3f8;
+}
+
+body.dark-mode .history-header p {
+    color: #9996a8;
+}
+
+body.dark-mode .empty-history {
+    background: #201e27;
+
+    border-color: #393642;
+}
+
+body.dark-mode .empty-history h3 {
+    color: #e7e5ed;
+}
+
+body.dark-mode .history-card {
+    background: #201e27;
+
+    border-color: #35323f;
+}
+
+body.dark-mode .history-card h3 {
+    color: #eeeef2;
+}
+
+body.dark-mode .history-preview {
+    color: #aaa7b5;
+}
+
+body.dark-mode .clear-history-button {
+    background: #24222c;
+
+    border-color: #393642;
+
+    color: #d38ba0;
+}

@@ -1,0 +1,1089 @@
+/* =========================
+   MAIN APP
+========================= */
+
+.app {
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 40px 20px 60px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f8f7fc 0%,
+            #ffffff 45%,
+            #f8f7fc 100%
+        );
+
+    color: #22222a;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.app-header {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eeeafd;
+
+    color: #6d58c5;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 15px rgba(90, 70, 160, 0.08);
+}
+
+.brand h1 {
+    margin: 0;
+
+    font-size: 28px;
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+
+    color: #25252d;
+}
+
+.brand p {
+    margin: 2px 0 0;
+
+    font-size: 12px;
+
+    color: #8c8c98;
+}
+
+
+/* =========================
+   HEADER ACTIONS
+========================= */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* =========================
+   AI BADGE
+========================= */
+
+.header-badge {
+    padding: 8px 13px;
+
+    border-radius: 20px;
+
+    background: #f0edff;
+
+    color: #6954ba;
+
+    border: 1px solid #ded7fa;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   DARK MODE BUTTON
+========================= */
+
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e5e2ed;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   COMPONENT SPACING
+========================= */
+
+.text-input-card {
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   BUTTON CONTAINER
+========================= */
+
+.app > .button-container {
+    max-width: 900px;
+
+    margin: 20px auto;
+}
+
+
+/* =========================
+   SUMMARY
+========================= */
+
+.app > .summary-box {
+    margin-top: 28px;
+}
+
+
+/* =========================
+   SUMMARY LENGTH
+========================= */
+
+.length-selector {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 18px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 15px;
+
+    background: #faf9fd;
+
+    border: 1px solid #e9e6f1;
+
+    border-radius: 12px;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.length-label {
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #5f5e69;
+}
+
+.length-options {
+    display: flex;
+    gap: 7px;
+}
+
+.length-options button {
+    padding: 7px 12px;
+
+    border-radius: 8px;
+
+    border: 1px solid #e2dfeb;
+
+    background: #ffffff;
+
+    color: #777582;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.length-options button:hover {
+    border-color: #c9c1eb;
+
+    color: #6954ba;
+}
+
+.length-options button.selected {
+    background: #eeeafd;
+
+    border-color: #cfc5f2;
+
+    color: #6752ba;
+
+    box-shadow:
+        0 2px 6px rgba(100, 80, 180, 0.08);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.app-footer {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 55px auto 0;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #e9e7ef;
+
+    text-align: center;
+
+    color: #9998a5;
+}
+
+.footer-brand {
+    font-size: 15px;
+    font-weight: 700;
+
+    color: #7560cf;
+
+    margin-bottom: 5px;
+}
+
+.app-footer p {
+    margin: 0 0 4px;
+
+    font-size: 12px;
+}
+
+.app-footer span {
+    font-size: 10px;
+
+    color: #b1b0ba;
+}
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+body.dark-mode {
+    background: #111015;
+}
+
+body.dark-mode .app {
+    background:
+        linear-gradient(
+            180deg,
+            #111015 0%,
+            #17151d 50%,
+            #111015 100%
+        );
+
+    color: #eeeeF2;
+}
+
+
+/* =========================
+   DARK BRAND
+========================= */
+
+body.dark-mode .brand-icon {
+    background: #29243d;
+
+    color: #a995ed;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .brand h1 {
+    color: #f4f3f8;
+}
+
+body.dark-mode .brand p {
+    color: #9996a8;
+}
+
+
+/* =========================
+   DARK AI BADGE
+========================= */
+
+body.dark-mode .header-badge {
+    background: #29243d;
+
+    color: #b3a3ed;
+
+    border-color: #443b61;
+}
+
+
+/* =========================
+   DARK THEME BUTTON
+========================= */
+
+body.dark-mode .theme-toggle {
+    background: #24212b;
+
+    border-color: #3a3644;
+
+    color: #eeeeF2;
+}
+
+body.dark-mode .theme-toggle:hover {
+    background: #2d2935;
+}
+
+
+/* =========================
+   DARK SUMMARY LENGTH
+========================= */
+
+body.dark-mode .length-selector {
+    background: #1d1a24;
+
+    border-color: #35313e;
+}
+
+body.dark-mode .length-label {
+    color: #d0cdd8;
+}
+
+body.dark-mode .length-options button {
+    background: #282530;
+
+    border-color: #3a3645;
+
+    color: #aaa7b5;
+}
+
+body.dark-mode .length-options button:hover {
+    background: #302b3b;
+
+    border-color: #7560cf;
+
+    color: #b5a7ee;
+}
+
+body.dark-mode .length-options button.selected {
+    background: #362e52;
+
+    border-color: #7560cf;
+
+    color: #c3b8f5;
+}
+
+
+/* =========================
+   DARK FOOTER
+========================= */
+
+body.dark-mode .app-footer {
+    border-color: #302c38;
+
+    color: #8d8998;
+}
+
+body.dark-mode .footer-brand {
+    color: #a18ee9;
+}
+
+body.dark-mode .app-footer p {
+    color: #9996a8;
+}
+
+body.dark-mode .app-footer span {
+    color: #777482;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .app {
+        padding: 25px 15px 40px;
+    }
+
+    .app-header {
+        margin-bottom: 25px;
+    }
+
+    .brand-icon {
+        width: 40px;
+        height: 40px;
+
+        font-size: 20px;
+    }
+
+    .brand h1 {
+        font-size: 24px;
+    }
+
+    .brand p {
+        font-size: 11px;
+    }
+
+    .header-badge {
+        padding: 7px 10px;
+
+        font-size: 10px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .app {
+        padding: 20px 12px 35px;
+    }
+
+    .app-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .header-actions {
+        width: 100%;
+
+        justify-content: space-between;
+    }
+
+    .brand h1 {
+        font-size: 22px;
+    }
+
+    .brand p {
+        font-size: 10px;
+    }
+
+    .text-input-card h2 {
+        font-size: 18px;
+    }
+
+    .input-heading {
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+
+    .character-limit {
+        font-size: 9px;
+    }
+
+    .text-input-card textarea {
+        min-height: 230px;
+    }
+
+    .button-container {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .button-container button {
+        width: 100%;
+    }
+
+    .summary-header {
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
+    .summary-actions {
+        width: 100%;
+    }
+
+    .copy-button,
+    .download-button {
+        flex: 1;
+    }
+
+    .summary-stats {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .app-footer {
+        margin-top: 40px;
+    }
+
+    .length-selector {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+    .length-options {
+        width: 100%;
+    }
+
+    .length-options button {
+        flex: 1;
+    }
+}
+/* =========================================
+   COMPLETE DARK MODE
+========================================= */
+
+body.dark-mode {
+    margin: 0;
+    background: #111015;
+    color: #eeeeee;
+}
+
+body.dark-mode .app {
+    background: linear-gradient(
+        180deg,
+        #111015 0%,
+        #17151d 50%,
+        #111015 100%
+    );
+
+    color: #eeeeee;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+body.dark-mode .brand h1 {
+    color: #f5f3fa;
+}
+
+body.dark-mode .brand p {
+    color: #9b98a8;
+}
+
+body.dark-mode .brand-icon {
+    background: #292440;
+    color: #aa96ef;
+}
+
+body.dark-mode .header-badge {
+    background: #292440;
+    color: #b8a8ef;
+    border-color: #443b60;
+}
+
+
+/* =========================
+   THEME BUTTON
+========================= */
+
+body.dark-mode .theme-toggle {
+    background: #24212c;
+    color: #eeeeee;
+    border-color: #3b3745;
+}
+
+body.dark-mode .theme-toggle:hover {
+    background: #302b39;
+}
+
+
+/* =========================
+   SUMMARY LENGTH
+========================= */
+
+body.dark-mode .length-selector {
+    background: #1e1b25;
+    border-color: #37333f;
+}
+
+body.dark-mode .length-label {
+    color: #d4d1dc;
+}
+
+body.dark-mode .length-options button {
+    background: #292630;
+    border-color: #403b49;
+    color: #aaa7b5;
+}
+
+body.dark-mode .length-options button:hover {
+    background: #332e3e;
+    border-color: #7560cf;
+    color: #c1b4f2;
+}
+
+body.dark-mode .length-options button.selected {
+    background: #392f56;
+    border-color: #7560cf;
+    color: #d0c5fa;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+body.dark-mode .button-container {
+    color: #eeeeee;
+}
+
+body.dark-mode .clear-btn {
+    background: #292630;
+    border-color: #403b49;
+    color: #d0cdd8;
+}
+
+body.dark-mode .clear-btn:hover {
+    background: #35303f;
+}
+
+
+/* =========================
+   SUMMARY BOX
+========================= */
+
+body.dark-mode .summary-box {
+    background: #1e1b25;
+    border-color: #37333f;
+    color: #eeeeee;
+}
+
+body.dark-mode .summary-box h2 {
+    color: #f2eff8;
+}
+
+body.dark-mode .summary-content {
+    color: #d8d5df;
+}
+
+body.dark-mode .summary-content p {
+    color: #d8d5df;
+}
+
+body.dark-mode .summary-content .placeholder {
+    color: #777482;
+}
+
+
+/* =========================
+   SUMMARY ACTION BUTTONS
+========================= */
+
+body.dark-mode .copy-button,
+body.dark-mode .download-button {
+    background: #292630;
+    border-color: #403b49;
+    color: #c8c4d2;
+}
+
+body.dark-mode .copy-button:hover,
+body.dark-mode .download-button:hover {
+    background: #35303f;
+    border-color: #514a62;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+body.dark-mode .app-footer {
+    border-top-color: #302c38;
+    color: #8f8b99;
+}
+
+body.dark-mode .footer-brand {
+    color: #a18ee9;
+}
+
+body.dark-mode .app-footer p {
+    color: #9995a5;
+}
+
+body.dark-mode .app-footer span {
+    color: #777482;
+}
+/* =========================
+   PDF UPLOAD
+========================= */
+
+.pdf-upload-card {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 20px auto;
+
+    padding: 22px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    background: #faf9fd;
+
+    border: 1px dashed #d7d1e8;
+
+    border-radius: 14px;
+
+    transition: all 0.25s ease;
+}
+
+.pdf-upload-card:hover {
+    border-color: #9b8bd4;
+
+    background: #f8f6fd;
+}
+
+.pdf-upload-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: #eeeafd;
+
+    font-size: 24px;
+}
+
+.pdf-upload-content {
+    flex: 1;
+}
+
+.pdf-upload-content h2 {
+    margin: 0 0 5px;
+
+    font-size: 18px;
+
+    color: #292733;
+}
+
+.pdf-upload-content p {
+    margin: 0 0 12px;
+
+    font-size: 12px;
+
+    color: #858290;
+}
+
+.pdf-upload-button {
+    padding: 9px 15px;
+
+    border: 1px solid #d1c8ed;
+
+    border-radius: 9px;
+
+    background: #eeeafd;
+
+    color: #6752ba;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.pdf-upload-button:hover {
+    background: #e4def9;
+
+    transform: translateY(-1px);
+}
+
+.pdf-upload-button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+.selected-file {
+    margin-top: 9px !important;
+
+    color: #6b5abb !important;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   PDF DARK MODE
+========================= */
+
+body.dark-mode .pdf-upload-card {
+    background: #1e1b25;
+
+    border-color: #454052;
+}
+
+body.dark-mode .pdf-upload-card:hover {
+    background: #24212c;
+
+    border-color: #7560cf;
+}
+
+body.dark-mode .pdf-upload-icon {
+    background: #2d2741;
+}
+
+body.dark-mode .pdf-upload-content h2 {
+    color: #f0edf7;
+}
+
+body.dark-mode .pdf-upload-content p {
+    color: #9995a5;
+}
+
+body.dark-mode .pdf-upload-button {
+    background: #342d4d;
+
+    border-color: #51466f;
+
+    color: #c5b8f2;
+}
+
+body.dark-mode .pdf-upload-button:hover {
+    background: #40355c;
+}
+
+body.dark-mode .selected-file {
+    color: #aa98e8 !important;
+}
+
+
+/* =========================
+   MOBILE PDF
+========================= */
+
+@media (max-width: 600px) {
+
+    .pdf-upload-card {
+        align-items: flex-start;
+
+        padding: 17px;
+    }
+
+    .pdf-upload-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 20px;
+    }
+
+    .pdf-upload-content h2 {
+        font-size: 16px;
+    }
+
+    .pdf-upload-content p {
+        font-size: 11px;
+    }
+}
+/* =========================
+   HISTORY SECTION
+========================= */
+
+.app > .history-box {
+    margin-bottom: 20px;
+}
+.user-email {
+    padding: 8px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 14px;
+}
+
+.logout-button {
+    border: none;
+    padding: 9px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    background: #ff6b6b;
+    color: white;
+    transition: 0.2s;
+}
+
+.logout-button:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+.auth-error {
+    color: #ff6b6b;
+    font-size: 14px;
+    margin: 8px 0;
+}
+/* =========================
+   LANGUAGE SELECTOR
+========================= */
+
+.language-selector {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 12px auto 18px;
+
+    padding: 12px 15px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #faf9fd;
+
+    border: 1px solid #e9e6f1;
+
+    border-radius: 12px;
+}
+
+.language-label {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #5f5e69;
+}
+
+.language-selector select {
+    min-width: 170px;
+
+    padding: 8px 12px;
+
+    border-radius: 9px;
+
+    border: 1px solid #e2dfeb;
+
+    background: #ffffff;
+
+    color: #5f5b69;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition: all 0.2s ease;
+}
+
+.language-selector select:hover {
+    border-color: #c9c1eb;
+}
+
+.language-selector select:focus {
+    border-color: #7560cf;
+
+    box-shadow:
+        0 0 0 3px rgba(117, 96, 207, 0.12);
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode .language-selector {
+    background: #201e27;
+
+    border-color: #35323f;
+}
+
+body.dark-mode .language-label {
+    color: #d0cdd8;
+}
+
+body.dark-mode .language-selector select {
+    background: #282630;
+
+    border-color: #3a3745;
+
+    color: #ddd9e8;
+}
+
+body.dark-mode .language-selector select:hover {
+    border-color: #7560cf;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .language-selector {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 9px;
+    }
+
+    .language-selector select {
+        width: 100%;
+    }
+}

@@ -1,0 +1,254 @@
+/* =========================
+   TEXT INPUT CARD
+========================= */
+
+.text-input-card {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.text-input-card h2 {
+  margin: 0 0 14px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #22222a;
+}
+
+/* =========================
+   TEXT AREA WRAPPER
+========================= */
+
+.text-input-card textarea {
+  width: 100%;
+  min-height: 300px;
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  border: 1.5px solid #e4e3eb;
+  border-radius: 16px;
+
+  resize: vertical;
+
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.7;
+
+  color: #30303a;
+  background: #fafafd;
+
+  outline: none;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease;
+}
+
+/* =========================
+   FOCUS EFFECT
+========================= */
+
+.text-input-card textarea:focus {
+  border-color: #8066dd;
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 4px rgba(128, 102, 221, 0.10),
+    0 8px 25px rgba(40, 35, 80, 0.06);
+}
+
+/* =========================
+   PLACEHOLDER
+========================= */
+
+.text-input-card textarea::placeholder {
+  color: #a1a1ad;
+  opacity: 1;
+}
+
+/* =========================
+   COUNTER
+========================= */
+
+.counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 10px;
+  padding: 0 4px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  color: #92929d;
+}
+
+.counter span {
+  transition: color 0.2s ease;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.text-input-card textarea::-webkit-scrollbar {
+  width: 7px;
+}
+
+.text-input-card textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.text-input-card textarea::-webkit-scrollbar-thumb {
+  background: #d6d1ef;
+  border-radius: 10px;
+}
+
+.text-input-card textarea::-webkit-scrollbar-thumb:hover {
+  background: #b9afe5;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .text-input-card textarea {
+    min-height: 250px;
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .counter {
+    font-size: 11px;
+  }
+}
+/* =========================
+   INPUT HEADING
+========================= */
+
+.input-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 14px;
+}
+
+.input-heading h2 {
+  margin: 0;
+}
+
+.character-limit {
+  font-size: 11px;
+  color: #aaaab4;
+
+  background: #f5f4f8;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+}
+
+
+/* =========================
+   CHARACTER WARNING
+========================= */
+
+.counter-warning {
+  color: #d97706 !important;
+  font-weight: 600;
+}
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode .text-input-card h2 {
+    color: #f1eff6;
+}
+
+body.dark-mode .character-limit {
+    background: #292731;
+    color: #aaa7b5;
+}
+
+body.dark-mode .text-input-card textarea {
+    background: #201e27;
+    border-color: #383541;
+    color: #eeeeF2;
+}
+
+body.dark-mode .text-input-card textarea:focus {
+    background: #24222c;
+    border-color: #7560cf;
+    box-shadow: 0 0 0 4px rgba(117, 96, 207, 0.18);
+}
+
+body.dark-mode .text-input-card textarea::placeholder {
+    color: #777482;
+}
+
+body.dark-mode .counter {
+    color: #8f8c9b;
+}
+
+body.dark-mode .text-input-card textarea::-webkit-scrollbar-track {
+    background: #292731;
+}
+
+body.dark-mode .text-input-card textarea::-webkit-scrollbar-thumb {
+    background: #514b63;
+}
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode .text-input-card h2 {
+    color: #f1eff6;
+}
+
+body.dark-mode .text-input-card textarea {
+    background: #201e27;
+
+    border-color: #383541;
+
+    color: #eeeeF2;
+}
+
+body.dark-mode .text-input-card textarea:focus {
+    background: #24222c;
+
+    border-color: #7560cf;
+
+    box-shadow:
+        0 0 0 4px rgba(117, 96, 207, 0.18);
+}
+
+body.dark-mode .text-input-card textarea::placeholder {
+    color: #777482;
+}
+
+body.dark-mode .counter {
+    color: #8f8c9b;
+}
+
+body.dark-mode .text-input-card textarea::-webkit-scrollbar-track {
+    background: #292731;
+}
+
+body.dark-mode .text-input-card textarea::-webkit-scrollbar-thumb {
+    background: #514b63;
+}
+
+body.dark-mode .text-input-card textarea::-webkit-scrollbar-thumb:hover {
+    background: #7560cf;
+}

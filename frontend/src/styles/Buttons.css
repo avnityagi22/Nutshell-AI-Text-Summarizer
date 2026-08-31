@@ -1,0 +1,208 @@
+/* =========================
+   BUTTON CONTAINER
+========================= */
+
+.button-container {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 20px auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+/* =========================
+   COMMON BUTTON
+========================= */
+
+.button-container button {
+  min-height: 44px;
+
+  padding: 0 20px;
+
+  border-radius: 11px;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+
+  border: none;
+}
+
+
+/* =========================
+   SUMMARIZE BUTTON
+========================= */
+
+.summarize-btn {
+  min-width: 180px;
+
+  background: #7560cf;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 5px 14px rgba(117, 96, 207, 0.22);
+}
+
+.summarize-btn:hover {
+  background: #6752bd;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 18px rgba(117, 96, 207, 0.28);
+}
+
+.summarize-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================
+   CLEAR BUTTON
+========================= */
+
+.clear-btn {
+  background: #ffffff;
+
+  color: #666672;
+
+  border: 1px solid #e2e0e8 !important;
+}
+
+.clear-btn:hover {
+  background: #faf9fc;
+
+  border-color: #cbc8d6 !important;
+
+  color: #44444e;
+
+  transform: translateY(-1px);
+}
+
+.clear-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================
+   DISABLED
+========================= */
+
+.button-container button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.summarize-btn.loading {
+  cursor: not-allowed;
+
+  opacity: 0.8;
+}
+
+.button-spinner {
+  width: 14px;
+  height: 14px;
+
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  margin-right: 8px;
+
+  animation: buttonSpin 0.7s linear infinite;
+}
+
+@keyframes buttonSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .button-container {
+    gap: 8px;
+  }
+
+  .button-container button {
+    padding: 0 14px;
+
+    font-size: 12px;
+  }
+
+  .summarize-btn {
+    min-width: 160px;
+  }
+}
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode .clear-btn {
+    background: #24222c;
+    border-color: #3b3846 !important;
+    color: #b8b5c1;
+}
+
+body.dark-mode .clear-btn:hover {
+    background: #2c2934;
+    border-color: #504b5d !important;
+    color: #e0dde7;
+}
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode .clear-btn {
+    background: #24222c;
+
+    border-color: #3b3846;
+
+    color: #b8b5c1;
+}
+
+body.dark-mode .clear-btn:hover {
+    background: #2c2934;
+
+    border-color: #504b5d;
+
+    color: #e0dde7;
+}
