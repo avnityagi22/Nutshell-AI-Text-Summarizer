@@ -242,8 +242,8 @@ formData.append(
 );
             const response =
                 await fetch(
-                    "http://localhost:5000/summarize-pdf",
-                    {
+                    "https://nutshell-ai-text-summarizer.onrender.com/summarize", {
+                    
                         method: "POST",
                         body: formData
                     }
