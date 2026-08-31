@@ -242,7 +242,7 @@ formData.append(
 );
             const response =
                 await fetch(
-                    "https://nutshell-ai-text-summarizer.onrender.com/summarize", {
+                    "https://nutshell-ai-text-summarizer.onrender.com/summarize-pdf", {
                     
                         method: "POST",
                         body: formData
@@ -334,7 +334,7 @@ formData.append(
 
             const response =
                 await fetch(
-                    "http://localhost:5000/summarize",
+                    "https://nutshell-ai-text-summarizer.onrender.com/summarize",
                     {
                         method: "POST",
 
